@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hunding Phone API</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="text-4xl text-center font-semibold mb-14 mt-5 text-green-500">
+        Hunding Phone API
+      </h1>
+    </header>
+    <main>
+      <section class="w-10/12 mx-auto">
+        <div class="mb-10 text-right">
+          <input
+            type="text"
+            id="search-field"
+            placeholder="Search Here..."
+            class="input input-bordered w-full max-w-xs p-4 bg-gray-100"
+          />
+          <button
+            onclick="eventHeander()"
+            id="search-btn"
+            class="btn btn-accent"
+          >
+            Accent
+          </button>
+        </div>
+      </section>
+      <section class="w-10/12 mx-auto">
+        <div id="LoadingSpener" class="my-48 text-center hidden">
+          <span class="loading loading-dots loading-lg"></span>
+        </div>
+
+        <div
+          id="phone-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+        ></div>
+
+        <div id="showAllBtn" class="hidden text-center">
+          <button onclick="btnShowAllPro()" class="btn btn-primary my-10">
+            Primary
+          </button>
+        </div>
+
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+          <form method="dialog" class="modal-box">
+            <div id="show-phone-details"></div>
+          </form>
+        </dialog>
+      </section>
+    </main>
+    <footer></footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
